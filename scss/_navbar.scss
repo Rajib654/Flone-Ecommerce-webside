@@ -1,0 +1,149 @@
+@import './variables';
+
+@mixin hover-style {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 125px;
+    z-index: 200;
+    padding: 8px 12px 10px;
+    transition: all .5s ease 0s;
+    transform: rotateX(90deg);
+    transform-origin: center top 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #fff;
+    box-shadow: 0 1px 7px -2px rgb(0 0 0 / 30%);
+
+    li:hover{
+     color: $primary-color;
+     }
+}
+
+
+.top-navbar{
+    border-bottom: 1px solid $border-color;
+    color: $text-color;
+    font-size: 14px;
+   
+    .li-bar{
+        width: 1px;
+        height: 20px;
+        background-color: $border-color;
+        margin-top: 5px;
+    }
+    .nav-price{
+        color: $secondary-color;
+    }
+    .nav-item{
+        padding: 5px 15px;
+      
+    }
+    .language{
+        position: relative;
+
+        ul{
+         @include hover-style;
+        }
+        &:hover ul{
+            visibility: visible;
+            opacity: 1;
+            transform: rotateX(0deg); 
+            
+        }
+    }
+    .currency{
+        position: relative;
+        @extend .language;
+        
+    }
+
+}
+
+// Secondary Navbar
+.secondary-navbar{
+    padding: 1rem 0;
+    color: $text-color;
+}
+.custom-dropdown{
+    position: relative;
+
+    .custom-menu2{
+        @include hover-style;
+        top:150%;
+        width: 700px;
+        padding: 1rem 1.5rem;
+    text-align: left;
+    .custom-col{
+       padding: 1rem;
+       li{
+           transition: all 0.5s ease-in-out;
+           font-size: 14px;
+           padding: 0.3rem 0;
+       }
+       li:hover{
+           color: $primary-color;
+           list-style-type: disc;
+           transform: translateX(1rem);
+          
+       }
+    }
+    h5{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .custom-col:hover{
+        h5{
+            color: $primary-color;
+        }
+    }
+    }
+    .custom-menu3{
+        @include hover-style;
+        top:150%;
+        left: -80px;
+        width: 700px;
+        padding: 1rem 1.5rem;
+        text-align: left;
+        .custom-col{
+           padding: 1rem;
+           li{
+               transition: all 0.5s ease-in-out;
+               font-size: 14px;
+               padding: 0.3rem 0;
+           }
+           li:hover{
+               color: $primary-color;
+               list-style-type: disc;
+               transform: translateX(1rem);
+              
+           }
+        }
+        h5{
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .custom-col:hover{
+            h5{
+                color: $primary-color;
+            }
+        }
+    }
+    &:hover .custom-menu2{
+        visibility: visible;
+        opacity: 1;
+        transform: rotateX(0deg); 
+        overflow: hidden;
+        
+    }
+}
+.shop:hover .custom-menu3{
+    visibility: visible;
+    opacity: 1;
+    transform: rotateX(0deg); 
+    overflow: hidden;
+}
+.nav-icon{
+    color: $text-color;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,32 @@
+// Custom.scss
+
+// Import custom scss
+
+@import './resets';
+@import './navbar';
+@import './variables';
+@import './main-section';
+@import './-footer.scss';
+@import './product';
+
+
+
+
+
+// Option A: Include all of Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+
+// Then add additional custom code here
+
+.header{
+    font-size: 16px;
+     padding: 0.7rem 0;
+     font-weight: 500;
+    color: #5b5858;
+    span{
+        margin: 0 15px;
+    }
+}
