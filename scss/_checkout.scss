@@ -1,0 +1,137 @@
+@mixin h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 20px;
+    color: #000; 
+}
+@mixin label {
+    display: block;
+    margin: 0 0 7px;
+    color: #000;
+}
+
+
+.check-out-area{
+     padding: 50px 0;
+     
+
+    .billing-info-wrap{
+
+        h3{
+           @include h3;
+        }
+        .billing-info{
+            label{
+                @include label;
+            }
+            input{
+                width: 100%;
+                height: 45px;
+                box-shadow: none;
+                outline: none;
+                margin-bottom: 15px;
+                font-size: 14px;
+                padding-right: 10px;
+                padding-left: 20px;
+                color: #333;
+                border: 1px solid #e6e6e6;
+                background: transparent none repeat scroll 0 0;
+            }
+        }
+        .billing-select select{
+            width: 100%;
+            height: 45px;
+            padding: 2px 20px;
+            cursor: pointer;
+            color: #333;
+            border: 1px solid #e6e6e6;
+            outline: none;
+
+            option{
+                font-size: 14px;
+                padding-left: 10px;
+                border: 0 solid #626262;
+                background: #fff;
+                
+            }
+        }
+        .additional-information{
+       
+            h3{
+               @include h3;
+            }
+            label{
+                @include label;
+            }
+            textarea{
+                width: 100%;
+                font-size: 14px;
+                height: 138px;
+                padding: 17px 20px;
+                color: #333;
+                border: 1px solid #e6e6e6;
+                background: transparent none repeat scroll 0 0;
+            }
+           }
+
+        
+   }
+
+    .your-order-area{
+        h3{
+            @include h3; 
+        }
+        
+        .your-order-item-info{
+             
+            padding: 38px 45px 44px;
+            background-color: #f6f6f6;
+            .order-title{
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+        .product-name{
+            margin: 29px 0;
+            padding: 19px 0 18px;
+            border-top: 1px solid #dee0e4;
+            border-bottom: 1px solid #dee0e4;
+        }
+
+        .product-total{
+            @extend .product-name;
+            font-size: 16px;
+            font-weight: 500;
+
+        }
+        
+
+    }
+    .place-order{
+        margin: 20px 0;
+        .order-btn{
+            font-weight: 500;
+            line-height: 1;
+            z-index: 9;
+            display: block;
+            width: 100%;
+            padding: 18px 20px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            background: none;
+            background-color: #a749ff;
+            transition: all 0.3s ease;
+
+            &:hover{
+                background-color: #010101;
+            }
+        }
+    }
+
+
+}
+

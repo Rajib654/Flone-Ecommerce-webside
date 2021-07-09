@@ -59,6 +59,33 @@ body {
   position: relative;
 }
 
+.pages {
+  position: relative;
+}
+.pages ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 125px;
+  z-index: 200;
+  padding: 8px 12px 10px;
+  transition: all 0.5s ease 0s;
+  transform: rotateX(90deg);
+  transform-origin: center top 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #fff;
+  box-shadow: 0 1px 7px -2px rgba(0, 0, 0, 0.3);
+}
+.pages ul li:hover {
+  color: #6610f2;
+}
+.pages:hover ul {
+  visibility: visible;
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
 .secondary-navbar {
   padding: 1rem 0;
   color: #555252;
@@ -853,6 +880,116 @@ body {
 }
 .related-product-area .section-title h2::after, .related-product-area .section-title .h2::after {
   right: -100px;
+}
+
+.check-out-area {
+  padding: 50px 0;
+}
+.check-out-area .billing-info-wrap h3, .check-out-area .billing-info-wrap .h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 20px;
+  color: #000;
+}
+.check-out-area .billing-info-wrap .billing-info label {
+  display: block;
+  margin: 0 0 7px;
+  color: #000;
+}
+.check-out-area .billing-info-wrap .billing-info input {
+  width: 100%;
+  height: 45px;
+  box-shadow: none;
+  outline: none;
+  margin-bottom: 15px;
+  font-size: 14px;
+  padding-right: 10px;
+  padding-left: 20px;
+  color: #333;
+  border: 1px solid #e6e6e6;
+  background: transparent none repeat scroll 0 0;
+}
+.check-out-area .billing-info-wrap .billing-select select {
+  width: 100%;
+  height: 45px;
+  padding: 2px 20px;
+  cursor: pointer;
+  color: #333;
+  border: 1px solid #e6e6e6;
+  outline: none;
+}
+.check-out-area .billing-info-wrap .billing-select select option {
+  font-size: 14px;
+  padding-left: 10px;
+  border: 0 solid #626262;
+  background: #fff;
+}
+.check-out-area .billing-info-wrap .additional-information h3, .check-out-area .billing-info-wrap .additional-information .h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 20px;
+  color: #000;
+}
+.check-out-area .billing-info-wrap .additional-information label {
+  display: block;
+  margin: 0 0 7px;
+  color: #000;
+}
+.check-out-area .billing-info-wrap .additional-information textarea {
+  width: 100%;
+  font-size: 14px;
+  height: 138px;
+  padding: 17px 20px;
+  color: #333;
+  border: 1px solid #e6e6e6;
+  background: transparent none repeat scroll 0 0;
+}
+.check-out-area .your-order-area h3, .check-out-area .your-order-area .h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 20px;
+  color: #000;
+}
+.check-out-area .your-order-area .your-order-item-info {
+  padding: 38px 45px 44px;
+  background-color: #f6f6f6;
+}
+.check-out-area .your-order-area .your-order-item-info .order-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.check-out-area .your-order-area .product-name, .check-out-area .your-order-area .product-total {
+  margin: 29px 0;
+  padding: 19px 0 18px;
+  border-top: 1px solid #dee0e4;
+  border-bottom: 1px solid #dee0e4;
+}
+.check-out-area .your-order-area .product-total {
+  font-size: 16px;
+  font-weight: 500;
+}
+.check-out-area .place-order {
+  margin: 20px 0;
+}
+.check-out-area .place-order .order-btn {
+  font-weight: 500;
+  line-height: 1;
+  z-index: 9;
+  display: block;
+  width: 100%;
+  padding: 18px 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  background: none;
+  background-color: #a749ff;
+  transition: all 0.3s ease;
+}
+.check-out-area .place-order .order-btn:hover {
+  background-color: #010101;
 }
 
 /*!
@@ -20514,6 +20651,11 @@ readers do not read off random characters that represent icons */
 }
 .header span {
   margin: 0 15px;
+}
+
+.link {
+  color: #5d5d5d;
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
